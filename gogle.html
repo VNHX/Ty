@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://api.tianditu.gov.cn/api?v=4.0&tk=	8c0cab19a6ef0b13ed80db08c40548a8" type="text/javascript"></script>
+    <script src=" http://maps.google.cn/maps/api/js?key=AIzaSyBtSLtk5mgc9lnAldR1EZ7Qn79d_WTK49M&callback=initMap"></script>
+</head>
+<body>
+    <div id="map" style="width:100%;height:30rem"></div>
+</body>
+</html>
+<script>
+// 中心点位置
+var myCenter = new google.maps.LatLng(30.99875937194732, 123.38615234375);
+// 全局参数
+var map, arrayIndex, marker, markers = []
+// 初始化地图配置参数
+    map = new google.maps.Map(document.getElementById("map"), {
+        center: myCenter,
+        backgroundColor: '#a3ccff',
+        zoom: 5,
+        disableDefaultUI: true,
+        zoomControl: true,
+        // language: en-UK,
+        zoomControlOptions: {
+            position: google.maps.ControlPosition.LEFT_CENTER
+        },
+        scaleControl: true,
+        scaleControlOptions: {
+            position: google.maps.ControlPosition.TOP_CENTER
+        },
+        styles: [{
+                featureType: 'road',
+                elementType: 'geometry',
+                stylers: [{
+                        visibility: 'off'
+                    }]
+            }]
+    });
+   
+</script>
